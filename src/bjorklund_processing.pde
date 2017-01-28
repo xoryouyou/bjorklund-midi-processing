@@ -77,12 +77,6 @@ void init_instruments(int count)
 void setup()
 {
 
-	System.out.println("----------Output (from availableOutputs())----------");
-	midi_outputs = MidiBus.availableOutputs(); //Returns an array of available output devices
-	for (int i = 0;i < midi_outputs.length;i++) System.out.println("["+i+"] \""+midi_outputs[i]+"\"");
-
-	//TODO Select midi channel
-
 	mb = new MidiBus(this, -1, midi_outputs[selected_output]);
 	cp5 = new ControlP5(this);
 
